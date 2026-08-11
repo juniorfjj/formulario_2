@@ -25,34 +25,50 @@
     <label style="margin-top:28px;">Apoia os candidatos:</label>
 
     <div class="candidate-block">
-      <div class="candidate-name">Cícero</div>
+      <div class="candidate-name">Cícero <span class="candidate-cargo">Governador</span></div>
       <div class="radio-row">
         <label class="radio-option"><input type="radio" name="cicero" value="Sim" required> Sim</label>
         <label class="radio-option"><input type="radio" name="cicero" value="Não"> Não</label>
       </div>
+      <div class="outro-field hidden" id="outro-cicero">
+        <label for="outro-cicero-input">Outro:</label>
+        <input type="text" id="outro-cicero-input" name="ciceroOutro" placeholder="Nome do candidato que apoia">
+      </div>
     </div>
 
     <div class="candidate-block">
-      <div class="candidate-name">Mersinho</div>
+      <div class="candidate-name">Mersinho <span class="candidate-cargo">Dep. Federal</span></div>
       <div class="radio-row">
         <label class="radio-option"><input type="radio" name="mersinho" value="Sim" required> Sim</label>
         <label class="radio-option"><input type="radio" name="mersinho" value="Não"> Não</label>
       </div>
-    </div>
-
-    <div class="candidate-block">
-      <div class="candidate-name">Hervazio</div>
-      <div class="radio-row">
-        <label class="radio-option"><input type="radio" name="hervazio" value="Sim" required> Sim</label>
-        <label class="radio-option"><input type="radio" name="hervazio" value="Não"> Não</label>
+      <div class="outro-field hidden" id="outro-mersinho">
+        <label for="outro-mersinho-input">Outro:</label>
+        <input type="text" id="outro-mersinho-input" name="mersinhoOutro" placeholder="Nome do candidato que apoia">
       </div>
     </div>
 
     <div class="candidate-block">
-      <div class="candidate-name">Veneziano</div>
+      <div class="candidate-name">Hervazio <span class="candidate-cargo">Dep. Estadual</span></div>
+      <div class="radio-row">
+        <label class="radio-option"><input type="radio" name="hervazio" value="Sim" required> Sim</label>
+        <label class="radio-option"><input type="radio" name="hervazio" value="Não"> Não</label>
+      </div>
+      <div class="outro-field hidden" id="outro-hervazio">
+        <label for="outro-hervazio-input">Outro:</label>
+        <input type="text" id="outro-hervazio-input" name="hervazioOutro" placeholder="Nome do candidato que apoia">
+      </div>
+    </div>
+
+    <div class="candidate-block">
+      <div class="candidate-name">Veneziano <span class="candidate-cargo">Senador</span></div>
       <div class="radio-row">
         <label class="radio-option"><input type="radio" name="veneziano" value="Sim" required> Sim</label>
         <label class="radio-option"><input type="radio" name="veneziano" value="Não"> Não</label>
+      </div>
+      <div class="outro-field hidden" id="outro-veneziano">
+        <label for="outro-veneziano-input">Outro:</label>
+        <input type="text" id="outro-veneziano-input" name="venezianoOutro" placeholder="Nome do candidato que apoia">
       </div>
     </div>
 
@@ -61,6 +77,13 @@
     <datalist id="cidades-pb"></datalist>
     <div class="field-hint" id="cidadeHint">Carregando lista de municípios da Paraíba...</div>
     <div class="field-error" id="cidadeError">Selecione uma cidade válida da lista sugerida.</div>
+
+    <div id="bairroWrapper" class="hidden">
+      <label class="required" for="bairro">Bairro em João Pessoa</label>
+      <input type="text" id="bairro" name="bairro" list="bairros-jp" placeholder="Comece a digitar o nome do bairro..." autocomplete="off">
+      <datalist id="bairros-jp"></datalist>
+      <div class="field-hint">Selecione ou digite o nome do seu bairro.</div>
+    </div>
 
     <div class="consent">
       <input type="checkbox" id="consent" required>

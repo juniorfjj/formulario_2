@@ -69,6 +69,36 @@ input[type="tel"]:focus {
   margin-bottom: 8px;
 }
 
+.candidate-cargo {
+  font-weight: 400;
+  font-size: 13px;
+  color: #666;
+}
+
+.outro-field {
+  margin-top: 10px;
+}
+
+.outro-field label {
+  font-weight: 600;
+  font-size: 13px;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.outro-field input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.outro-field input:focus {
+  outline: none;
+  border-color: #4a7dfc;
+}
+
 .radio-row {
   display: flex;
   gap: 20px;
