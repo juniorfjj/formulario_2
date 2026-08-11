@@ -1,5 +1,5 @@
 // ATENÇÃO: cole aqui a URL do seu Google Apps Script depois de publicá-lo (ver GUIA-CONFIGURACAO.md)
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyyirsMuPRYpcZd8675xK6eeYAd_aW3nm_Re2X2s6JnsPdIAoiB6UiruVfnOHBqXtoA8w/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbylcyTKwNlzOA3lReq-K6vAgCy7Id-322JC4eaHLuNx8XwYplSZ3LWjxuX6PiV3dVzreA/exec";
 
 const form = document.getElementById('surveyForm');
 const btn = document.getElementById('submitBtn');
@@ -72,7 +72,7 @@ function cidadeValida() {
 }
 
 // ── Campo de bairro (só para João Pessoa) ────────────────────────────────────
-function atualizarBairro() {
+cidadeInput.addEventListener('input', function () {
   cidadeError.classList.remove('visible');
   if (normalize(cidadeInput.value) === normalize('João Pessoa')) {
     bairroWrapper.classList.remove('hidden');
@@ -82,10 +82,7 @@ function atualizarBairro() {
     bairroInput.removeAttribute('required');
     bairroInput.value = '';
   }
-}
-
-cidadeInput.addEventListener('input', atualizarBairro);
-cidadeInput.addEventListener('change', atualizarBairro);
+});
 
 // ── Campo "Outro" por candidato ───────────────────────────────────────────────
 ['cicero', 'mersinho', 'hervazio', 'veneziano'].forEach(function (nome) {
