@@ -72,7 +72,7 @@ function cidadeValida() {
 }
 
 // ── Campo de bairro (só para João Pessoa) ────────────────────────────────────
-cidadeInput.addEventListener('input', function () {
+function atualizarBairro() {
   cidadeError.classList.remove('visible');
   if (normalize(cidadeInput.value) === normalize('João Pessoa')) {
     bairroWrapper.classList.remove('hidden');
@@ -82,7 +82,10 @@ cidadeInput.addEventListener('input', function () {
     bairroInput.removeAttribute('required');
     bairroInput.value = '';
   }
-});
+}
+
+cidadeInput.addEventListener('input', atualizarBairro);
+cidadeInput.addEventListener('change', atualizarBairro);
 
 // ── Campo "Outro" por candidato ───────────────────────────────────────────────
 ['cicero', 'mersinho', 'hervazio', 'veneziano'].forEach(function (nome) {
