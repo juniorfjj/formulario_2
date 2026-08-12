@@ -9,7 +9,7 @@
 <body>
 
 <div class="container">
-  <h1>Formulário de Pesquisa</h1>
+  <h1>Formulário</h1>
   <div class="subtitle">Preencha os campos abaixo. Campos com * são obrigatórios.</div>
 
   <form id="surveyForm">
@@ -25,7 +25,7 @@
     <label style="margin-top:28px;">Apoia os candidatos:</label>
 
     <div class="candidate-block">
-      <div class="candidate-name">Cícero <span class="candidate-cargo">(Governador)</span></div>
+      <div class="candidate-name">Cícero <span class="candidate-cargo">Governador</span></div>
       <div class="radio-row">
         <label class="radio-option"><input type="radio" name="cicero" value="Sim" required> Sim</label>
         <label class="radio-option"><input type="radio" name="cicero" value="Não"> Não</label>
@@ -37,7 +37,7 @@
     </div>
 
     <div class="candidate-block">
-      <div class="candidate-name">Mersinho <span class="candidate-cargo">(Dep. Federal)</span></div>
+      <div class="candidate-name">Mersinho <span class="candidate-cargo">Dep. Federal</span></div>
       <div class="radio-row">
         <label class="radio-option"><input type="radio" name="mersinho" value="Sim" required> Sim</label>
         <label class="radio-option"><input type="radio" name="mersinho" value="Não"> Não</label>
@@ -49,7 +49,7 @@
     </div>
 
     <div class="candidate-block">
-      <div class="candidate-name">Hervazio <span class="candidate-cargo">(Dep. Estadual)</span></div>
+      <div class="candidate-name">Hervazio <span class="candidate-cargo">Dep. Estadual</span></div>
       <div class="radio-row">
         <label class="radio-option"><input type="radio" name="hervazio" value="Sim" required> Sim</label>
         <label class="radio-option"><input type="radio" name="hervazio" value="Não"> Não</label>
@@ -61,7 +61,7 @@
     </div>
 
     <div class="candidate-block">
-      <div class="candidate-name">Veneziano <span class="candidate-cargo">(Senador)</span></div>
+      <div class="candidate-name">Veneziano <span class="candidate-cargo">Senador</span></div>
       <div class="radio-row">
         <label class="radio-option"><input type="radio" name="veneziano" value="Sim" required> Sim</label>
         <label class="radio-option"><input type="radio" name="veneziano" value="Não"> Não</label>
@@ -78,10 +78,10 @@
     <div class="field-hint" id="cidadeHint">Carregando lista de municípios da Paraíba...</div>
     <div class="field-error" id="cidadeError">Selecione uma cidade válida da lista sugerida.</div>
 
-    <datalist id="bairros-jp"></datalist>
     <div id="bairroWrapper" class="hidden">
       <label class="required" for="bairro">Bairro em João Pessoa</label>
-      <input type="text" id="bairro" name="bairro" list="bairros-jp" placeholder="Comece a digitar o nome do bairro...">
+      <input type="text" id="bairro" name="bairro" list="bairros-jp" placeholder="Comece a digitar o nome do bairro..." autocomplete="off">
+      <datalist id="bairros-jp"></datalist>
       <div class="field-hint">Selecione ou digite o nome do seu bairro.</div>
     </div>
 
